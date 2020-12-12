@@ -1,0 +1,325 @@
+{
+    "type": "Athena",
+    "data": [
+       {
+           "name": "Shop",
+           "image": null,
+           "description": "The module that grabs data from an API to show in a item shop form.",
+            "head": [
+                {
+                   "type": "link",
+                   "data": [
+                      {
+                         "type": "rel",
+                         "value": "stylesheet"
+                      },
+                      {
+                         "type": "href",
+                         "value": "./include.css"
+                      }
+                   ]
+                },
+                {
+                   "type": "link",
+                   "data": [
+                      {
+                         "type": "rel",
+                         "value": "stylesheet"
+                      },
+                      {
+                         "type": "href",
+                         "value": "./src/shop/index.css"
+                      }
+                   ]
+                },
+                {
+                   "type": "link",
+                   "data": [
+                      {
+                         "type": "rel",
+                         "value": "stylesheet"
+                      },
+                      {
+                         "type": "href",
+                         "value": "./item.css"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://code.jquery.com/jquery-3.5.1.js"
+                      },
+                      {
+                         "type": "integrity",
+                         "value": "sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+                      },
+                      {
+                         "type": "crossorigin",
+                         "value": "anonymous"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+                      },
+                      {
+                         "type": "integrity",
+                         "value": "sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+                      },
+                      {
+                         "type": "crossorigin",
+                         "value": "anonymous"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://cdn.jsdelivr.net/gh/swaydeng/imgcolr@1.0.1/imgcolr.html5.min.js"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "./src/shop/index.js"
+                      },
+                      {
+                         "type": "type",
+                         "value": "text/javascript"
+                      }
+                   ]
+                },
+                {
+                   "type": "meta",
+                   "data": [
+                      {
+                         "type": "name",
+                         "value": "viewport"
+                      },
+                      {
+                         "type": "content",
+                         "value": "width=device-width, initial-scale=1.0"
+                      }
+                   ]
+                },
+                {
+                   "type": "link",
+                   "data": [
+                      {
+                         "type": "rel",
+                         "value": "icon"
+                      },
+                      {
+                         "type": "href",
+                         "value": "../favicon.ico"
+                      },
+                      {
+                         "type": "type",
+                         "value": "image/ico/"
+                      }
+                   ]
+                },
+                {
+                   "type": "link",
+                   "data": [
+                      {
+                         "type": "rel",
+                         "value": "shortcut icon"
+                      },
+                      {
+                         "type": "href",
+                         "value": "../favicon.ico"
+                      },
+                      {
+                         "type": "type",
+                         "value": "image/x-icon/"
+                      }
+                   ]
+                }
+            ],
+            "body": "<div class=\"rows\"><div class=\"main\"><div><div style=\"background: linear-gradient(to right, #7289E7 8%, #6175B7);width: 262px;height: 410px;margin: 5px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div><div style=\"background: linear-gradient(to right, #7289E7 8%, #6175B7);width: 262px;height: 410px;margin: 5px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div><div style=\"width: 262px;height: 410px;margin: 5px;position: relative;top: -6px;left: -7px;flex-shrink: 0;\"><div style=\"background: linear-gradient(to right, #7289E7 8%, #6175B7);width: 100%;height: 202px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;margin: 6px;flex-shrink: 0;\"></div><div style=\"background: linear-gradient(to right, #7289E7 8%, #6175B7);width: 100%;height: 202px;margin: 6px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div></div><div style=\"width: 262px;height: 410px;margin: 5px;position: relative;top: -6px;left: -7px;flex-shrink: 0;\"><div style=\"background: linear-gradient(to right, #7289E7 8%, #6175B7);width: 100%;height: 202px;margin: 6px;animation-duration: 48.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div><div style=\"background: linear-gradient(to right, #7289E7 8%, #6175B7);width: 100%;height: 202px;margin: 6px;animation-duration: 45.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div></div><div style=\"background: linear-gradient(to right, #7289E7 8%, #6175B7);width: 262px;height: 410px;margin: 5px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div></div></div><div></div></div><div class=\"center\"><div class=\"updates\" style=\"display: none;\"><div>Updates</div><div><div><div>I</div>You can now save owned items, the colors have been changed for it as well.</div><div><div>I</div>Fixed and shrinked a lot of code making it go faster in loading.</div><div><div>I</div>Click events on items, making it able to own items.</div><div><div>I</div>We added the UPDATES menu and the button, making you able to see the updates.</div></div><div class=\"button\"><div>close</div></div></div></div>"
+        },
+        {
+            "name": "Collection",
+            "description": "The module that grabs data from our API and shows the data in a in-game form.",
+            "image": "https://fortnite-api.com/images/cosmetics/br/cid_883_athena_commando_m_chonejonesy/icon.png",
+            "head": [
+                {
+                   "type": "link",
+                   "data": [
+                      {
+                         "type": "rel",
+                         "value": "stylesheet"
+                      },
+                      {
+                         "type": "href",
+                         "value": "../../include.css"
+                      }
+                   ]
+                },
+                {
+                   "type": "link",
+                   "data": [
+                      {
+                         "type": "rel",
+                         "value": "stylesheet"
+                      },
+                      {
+                         "type": "href",
+                         "value": "./src/collection/index.css"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://code.jquery.com/jquery-3.5.1.js"
+                      },
+                      {
+                         "type": "integrity",
+                         "value": "sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+                      },
+                      {
+                         "type": "crossorigin",
+                         "value": "anonymous"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+                      },
+                      {
+                         "type": "integrity",
+                         "value": "sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+                      },
+                      {
+                         "type": "crossorigin",
+                         "value": "anonymous"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://cdn.jsdelivr.net/gh/swaydeng/imgcolr@1.0.1/imgcolr.html5.min.js"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "https://d3js.org/d3.v5.min.js"
+                      }
+                   ]
+                },
+                {
+                   "type": "script",
+                   "data": [
+                      {
+                         "type": "src",
+                         "value": "./src/collection/index.js"
+                      },
+                      {
+                         "type": "type",
+                         "value": "text/javascript"
+                      }
+                   ]
+                },
+                {
+                   "type": "link",
+                   "data": [
+                      {
+                         "type": "rel",
+                         "value": "stylesheet"
+                      },
+                      {
+                         "type": "href",
+                         "value": "../../item.css"
+                      }
+                   ]
+                },
+                {
+                   "type": "meta",
+                   "data": [
+                      {
+                         "type": "http-equiv",
+                         "value": "Content-Security-Policy"
+                      },
+                      {
+                         "type": "content",
+                         "value": "upgrade-insecure-requests"
+                      }
+                   ]
+                }
+             ],
+            "body": "<div class=\"character\"><div></div><div><div></div></div><div></div><div style=\"display: none;\"><div></div><div><!-- background: #0042FF; --><div><div></div><div></div></div><div><div></div><div></div></div><div><div></div><div></div></div></div></div></div><div class=\"characters\"></div><div class=\"error\" style=\"display: none;\"><div></div><div></div></div><div class=\"location\" style=\"display: none;\"><img><img draggable=\"false\"><div></div><div><div>My friend here Justin</div><div>Justin.Taken.Cracked.At.Fortnite.Uh</div></div></div>"
+        }
+      ]
+}

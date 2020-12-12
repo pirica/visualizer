@@ -1,0 +1,276 @@
+html {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: 100% 100vh;
+}
+
+.character {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    user-select: none;
+}
+
+.character > div:nth-of-type(3) {
+    background: radial-gradient(#0042E5 28%, #002581 136%);
+    width: 112%;
+    height: 100%;
+    transform: skew(4deg);
+    position: absolute;
+    left: 0;
+}
+
+.character > div:nth-of-type(1) {
+    background: #0042FF;
+    height: 120vh;
+    width: 11px;
+    position: absolute;
+    top: -10px;
+    left: -6px;
+    transform: skew(4deg);
+    box-shadow: 99px 411px 99px 21px #002581, 93px 442px 99px 21px #002581, 167px 431px 100px 21px #002581;
+    z-index: 1000;
+}
+
+.characters {
+    user-select: none;
+}
+
+.characters > div > div {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,0) linear-gradient(to bottom,rgba(255,255,255,0) 56%,rgba(0,66,197,0.5)) repeat scroll 0 0;
+}
+
+.characters > div:hover > img {
+    transform: scale(1.05);
+}
+
+.character > div:nth-of-type(4) {
+    color: white;
+    font-size: 50px;
+    z-index: 1000000;
+    position: ABSOLUTE;
+    font-family: BurBank;
+    font-style: italic;
+    text-transform: uppercase;
+    bottom: 170px;
+    left: 30px;
+    width: 86%;
+}
+
+.character > div:nth-of-type(4) > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+}
+
+.character > div:nth-of-type(4) > div:nth-of-type(2) > div {
+    width: 100%;
+    height: 100%;
+    margin: 2px;
+}
+
+.character > div:nth-of-type(4) > div:nth-of-type(2) > div > div:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #00155F;
+    opacity: 0.8;
+    font-size: 15px;
+    align-items: center;
+    display: flex;
+}
+
+.character > div:nth-of-type(4) > div:nth-of-type(2) > div > div:nth-of-type(2) {
+    position: relative;
+    transform: translate(0, -50%);
+    top: -12px;
+    left: 9px;
+    font-size: 1.5vw;
+}
+
+.location {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    left: 0;
+    top: 0;
+}
+
+.location > img {
+    width: 100%;
+    position: absolute;
+    box-shadow: 0 0 1000px;
+}
+
+.location > img:nth-of-type(2) {
+    position: relative;
+    top: 10px;
+    width: 54%;
+    box-shadow: none;
+}
+
+.location > div:nth-of-type(1) {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 110px;
+    background: rgba(255, 255, 255, 0) linear-gradient(to bottom, rgba(255, 255, 255, 0) 7%, rgba(0, 49, 197, 0.5) 80%) repeat scroll 0 0;
+}
+
+.location > div:nth-of-type(2) {
+    position: absolute;
+    color: #00FFFB;
+    font-family: 'BURBANK';
+    bottom: 52px;
+    left: 18px;
+    font-size: 56px;
+}
+
+.location > div:nth-of-type(2) > div:nth-of-type(2) {
+    font-size: 28px;
+    color: white;
+}
+
+.character > img {
+    width: 123%;
+    height: 100%;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.character > div:nth-of-type(2) {
+    width: 125%;
+    -webkit-mask-box-image: url(https://media.fortniteapi.io/images/177476c47b96e580499ada14a476da33/featured.png);
+    z-index: 100;
+    background: #002581;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    transition: 0.2s;
+    top: 50%;
+    position: absolute;
+}
+
+.character > div:nth-of-type(2) > div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0) linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 66, 197, 0.5) 170%) repeat scroll 0 0;
+}
+
+.background-container > div:nth-of-type(1) {
+    background: url(Eohn1nVVoAQsYUH.jpg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    filter: blur(10px);
+    transform: scale(1.5);
+}
+
+.background-container > div:nth-of-type(2) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: black;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+}
+
+.characters {
+    position: absolute;
+    display: flex;
+    flex-flow: wrap;
+    top: 5%;
+    width: 55%;
+    height: 96%;
+    overflow-y: scroll;
+}
+
+.characters > div {
+    width: 100px;
+    overflow: hidden;
+    height: 130px;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    background: black;
+    background: -moz-linear-gradient(146deg, rgba(13,71,168,1) 0%, rgba(46,157,226,1) 100%);
+    background: -webkit-linear-gradient(146deg, rgba(13,71,168,1) 0%, rgba(46,157,226,1) 100%);
+    background: linear-gradient(146deg, rgba(13,71,168,1) 0%, rgba(46,157,226,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d47a8",endColorstr="#2e9de2",GradientType=1);
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.characters > div > img {
+    width: 133%;
+    height: 100%;
+    user-select: none;
+    transition: .2s;
+}
+
+.error {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    color: white;
+    font-family: 'BurBank';
+    background: radial-gradient(#0042E5 28%, #002581 136%);
+    z-index: 1;
+    transform: skew(-6deg, 0deg) translate(-50%, -50%);
+    border: 6px solid #0042E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.error > div:nth-of-type(1) {
+    color: #002581;
+    font-size: 25px;
+}
+
+.error > div:nth-of-type(2) {
+    font-size: 25px;
+}
+
+::-webkit-scrollbar {
+    background: #0E52A0;
+    width: 8px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-corner {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7FD4FF;
+    height: 10px;
+}

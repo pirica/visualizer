@@ -1,0 +1,225 @@
+html {
+    font-family: BurBank;
+    user-select: none;
+    overflow: hidden;
+}
+
+.center {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+
+.rows {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 65%;
+    left: 50%;
+}
+
+.rows > div:not(.main) {
+    opacity: 0.5;
+}
+
+.rows > div {
+    width: 100%;
+    position: relative;
+    overflow: scroll;
+    top: -43px;
+}
+
+.main {
+    top: unset !important;
+}
+
+.rows > div:not(.main) > div:nth-of-type(2) {
+    display: none;
+}
+
+.rows > div > div:nth-of-type(1) {
+    margin: 50px;
+    display: flex;
+    position: relative;
+    left: -38px;
+}
+
+.rows > div img {
+    margin: 6px;
+}
+
+.rows > div > div:nth-of-type(2) {
+    position: fixed;
+    top: 10px;
+    left: -40%;
+    opacity: 0;
+    display: flex;
+}
+
+.rows > div > div:nth-of-type(2) > div:nth-of-type(2) {
+    color: white;
+    font-size: 17px;
+    padding: 7px;
+    background: #6175B7;
+    -webkit-transform: perspective(245px) rotateX(-30deg);
+    -o-transform: perspective(300px) rotateX(-30deg);
+    -moz-transform: perspective(300px) rotateX(-30deg);
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 56%;
+    border: 3px solid #7289DA;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 1;
+    white-space: nowrap;
+    top: -36px;
+    left: -17px;
+}
+
+.rows > div > div:nth-of-type(2) > div:nth-of-type(1) {
+    color: white;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-style: italic;
+    display: flex;
+}
+
+.rows > div:last-child:nth-of-type(1).main {
+    top: 50% !important;
+}
+
+.message {
+    bottom: 11px;
+    color: rgb(42 45 47);
+    position: absolute;
+    padding: 8px;
+    transform: translate(-50%);
+    left: 50%;
+    font-size: 2vh;
+    background: linear-gradient(to right, #7289E7 8%, #6175B7);
+    animation-duration: 48.2s;
+    animation-iteration-count: infinite;
+    animation-name: loading;
+    text-align: center;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.other {
+    width: 268px;
+    height: 411px;
+}
+
+.other {
+    width: 268px;
+    height: 411px;
+}
+
+.other > div {
+    height: 202px;
+}
+
+.other > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) {
+    top: 209px;
+}
+
+.updates {
+    transform: skew(-20deg, -40deg);
+    color: white;
+    font-size: 17px;
+    background: #6175B7;
+    -o-transform: perspective(300px) rotateX(-30deg);
+    -moz-transform: perspective(300px) rotateX(-30deg);
+    border: 3px solid #7289DA;
+    text-transform: uppercase;
+    width: 50vh;
+    transition: 0.2s;
+    height: 75vh;
+    z-index: 1;
+}
+
+.updates > div:nth-of-type(1) {
+    transform: translate(-50%);
+    left: 50%;
+    position: absolute;
+    font-size: 300%;
+    top: 16px;
+}
+
+.updates > div:nth-of-type(2) {
+    text-transform: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 100%;
+}
+
+.updates > div:nth-of-type(2) > div {
+    display: flex;
+    font-size: 100%;
+    position: relative;
+}
+
+.updates > div:nth-of-type(2) > div > div:nth-of-type(1) {
+    color: #7289DA;
+    width: 8%;
+    left: 6px;
+    position: relative;
+    font-size: 39px;
+}
+
+.updates .button {
+    font-family: 'BurBank';
+    width: 126px;
+    height: 66px;
+    font-size: 54%;
+    position: absolute;
+    bottom: 24px;
+    right: 26px;
+}
+
+.debug {
+    width: 90%;
+    height: 100px;
+    transform: translate(-50%);
+    left: 50%;
+    position: absolute;
+    background: white;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    top: -50%;
+    font-size: 27px;
+    opacity: 0;
+}
+
+.debug > div {
+    background: #0F0D12;
+    width: 100%;
+    height: 17px;
+    position: absolute;
+    top: 90px;
+    z-index: 0;
+    transition: 0.2s;
+    transform: rotate(-0.7deg);
+}
+
+@keyframes loading {
+    0% {
+        background-position: -50vw 0;
+    }
+    100% {
+        background-position: 50vw 0;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
