@@ -126,7 +126,7 @@ class Modules {
         $('.modules').children().not('[type="active"]').css('width', '0');
 
         if(this.mobile) {
-            const path = `./src/${module.name}/mobile.css`;
+            const path = `./src/${module.name.toLowerCase()}/mobile.css`;
             if(await exist(path)) {
                 const element = document.createElement('link');
                 element.rel = 'stylesheet';
