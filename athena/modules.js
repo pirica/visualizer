@@ -10,13 +10,15 @@ class Module {
         head,
         body,
         modules,
-        image
+        image,
+        background
     }) {
         this.name = name;
         this.description = description;
         this.body = body;
         this.head = head;
         this.modules = modules;
+        this.background = background;
         this.image = image;
         this.data = new ModuleData();
     }
@@ -81,9 +83,10 @@ class Modules {
             return;
         }
 
+        $('html').css('background', '');
         this.set(module);
 
-        const { head: headData, body } = module;
+        const { head: headData, body, background } = module;
 
         if($('head')[1]) $('head')[1].remove();
 
@@ -135,6 +138,16 @@ class Modules {
                 head.appendChild(element);
             }
         }
+
+        if($('.background')[0]) $('.background')[0].remove();
+
+        if(background) {
+            const element = document.createElement('div');
+            element.classList.add('background');
+            element.style.background = background;
+
+            document.body.appendChild(element);
+        }
         
         this.executed = module;
     }
@@ -153,7 +166,7 @@ class Modules {
             div.id = module.name;
 
             if(module.image) {
-                div.innerHTML = `<img src="${module.image}">`;
+                div.innerHTML = `<div style="-webkit-mask-box-image: url(https://fortnite-api.com/images/cosmetics/br/cid_883_athena_commando_m_chonejonesy/icon.png);"></div>`;
             }
 
             div.onclick = () => module.execute();
