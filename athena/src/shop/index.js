@@ -317,6 +317,8 @@ module.data.Shop = class Shop {
         };
 
         const delay = 1350;
+        const body = document.body;
+        let position = 0;
         let allow = true;
 
         document.onwheel = (e) => {
@@ -330,6 +332,16 @@ module.data.Shop = class Shop {
                 }, delay);
             }
         }
+
+        window.addEventListener('scroll', () => {
+            const direction = body.getBoundingClientRect().top > position ? 'up' : 'down';
+
+            cls.switch(direction, switching);
+
+            console.log(direction)
+
+            position = body.getBoundingClientRect().top;
+        });
 
         let open = false;
 

@@ -23,7 +23,7 @@ module.data.Characters = class Characters {
         if(localStorage.collection) {
             try {
                 const json = JSON.parse(localStorage.collection);
-                this.switch(characters.find(e => e.name === json.latest));
+                // this.switch(characters.find(e => e.name === json.latest));
             } catch(err) {
                 $('.character').css('display', 'none');
                 $('.error').css('display', '');
