@@ -35,7 +35,12 @@ html {
 
 .character {
     background: radial-gradient(#0042E5 28%, #002581 136%);
+    background: linear-gradient(-90deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
     width: 100%;
+}
+
+.character {
+    background: linear-gradient(-90deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
 }
 
 .character > img {
@@ -53,4 +58,9 @@ html {
     border-radius: 8px;
     z-index: 1;
     font-size: 700%;
+}
+
+.character > div:nth-of-type(5) {
+    color: rgba(255,0,0,1);
+    background: rgba(127,0,0,1);
 }
