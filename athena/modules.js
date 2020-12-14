@@ -139,15 +139,28 @@ class Modules {
             }
         }
 
-        if($('.background')[0]) $('.background')[0].remove();
+        const HolidayPath = `./src/${module.name.toLowerCase()}/holiday.css`;
+        if(await exist(HolidayPath)) {
+            const element = document.createElement('link');
+            element.rel = 'stylesheet';
+            element.href = HolidayPath;
 
-        if(background) {
-            const element = document.createElement('div');
-            element.classList.add('background');
-            element.style.background = background;
-
-            document.body.appendChild(element);
+            head.appendChild(element);
         }
+
+        // if($('.background')[0]) $('.background')[0].remove();
+
+        // if(background) {
+        //     const element = document.createElement('div');
+        //     element.classList.add('background');
+        //     element.style.background = background;
+
+        //     document.body.appendChild(element);
+        // }
+
+        const holiday = document.createElement('div');
+        head.appendChild(holiday);
+        holiday.outerHTML = '<link rel="stylesheet" href="./holiday.css">';
         
         this.executed = module;
     }
@@ -166,7 +179,7 @@ class Modules {
             div.id = module.name;
 
             if(module.image) {
-                div.innerHTML = `<div style="-webkit-mask-box-image: url(https://fortnite-api.com/images/cosmetics/br/cid_883_athena_commando_m_chonejonesy/icon.png);"></div>`;
+                div.innerHTML = `<div class="christmas" style="-webkit-mask-box-image: url(https://fortnite-api.com/images/cosmetics/br/cid_883_athena_commando_m_chonejonesy/icon.png);"></div>`;
             }
 
             div.onclick = () => module.execute();

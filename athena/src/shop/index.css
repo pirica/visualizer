@@ -27,7 +27,7 @@ html {
 .rows > div {
     width: 100%;
     position: relative;
-    overflow: scroll;
+    overflow-x: scroll;
     top: -43px;
 }
 
@@ -219,7 +219,7 @@ html {
         background-position: 50vw 0;
     }
 }
-
+/* 
 ::-webkit-scrollbar {
     display: none;
-}
+} */

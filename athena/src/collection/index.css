@@ -259,18 +259,3 @@ html {
 .error > div:nth-of-type(2) {
     font-size: 25px;
 }
-
-::-webkit-scrollbar {
-    background: #0E52A0;
-    width: 8px;
-    height: 7px;
-}
-
-::-webkit-scrollbar-corner {
-    background: black;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #7FD4FF;
-    height: 10px;
-}

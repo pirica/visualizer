@@ -56,7 +56,7 @@ html {
 }
 
 .modules > div > div {
-    background: #2c2f33;
+    /* background: #2c2f33; */
     width: 100%;
     height: 100%;
 }
@@ -85,23 +85,32 @@ html {
     left: 50%;
     top: 50%;
     position: absolute;
-    width: 400px;
-    height: 100px;
     color: white;
     font-family: 'BurBank';
-    background: radial-gradient(#0042E5 28%, #002581 136%);
+    overflow: hidden;
     z-index: 1;
     transform: skew(-6deg, 0deg) translate(-50%, -50%);
-    border: 6px solid #0042E5;
+    border: 3px solid white;
+    background: #2c2f33;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    width: 70%;
+    font-size: 100%;
+    height: 52%;
 }
 
 .error > div:nth-of-type(1) {
-    color: #002581;
-    font-size: 25px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.error > div:nth-of-type(1) > div:nth-of-type(1) {
+    font-size: 42px;
+    text-align: center;
+    line-height: 61px;
 }
 
 .error > div:nth-of-type(2) {
@@ -120,4 +129,54 @@ html {
 @font-face {
     font-family: BurBank;
     src: url(./src/font/index.ttf);
+}
+
+::-webkit-scrollbar {
+    background: #0E52A0;
+    width: 8px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-corner {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7FD4FF;
+    height: 10px;
+}
+
+.notification {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    transform: skew(9deg, 5deg);
+    background: #630000;
+    transition: 0.2s;
+    font-family: 'BurBank';
+    color: rgb(255,0,0);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    flex-direction: column;
+}
+
+.notification > div:nth-of-type(2) {
+    font-size: 15px;
+    color: rgb(206,0,0);
+}
+
+/* Holiday stuff */
+
+::-webkit-scrollbar-thumb {
+    background: rgba(127,0,0,1);
+}
+
+::-webkit-scrollbar {
+    background: rgba(255,0,0,1);
 }

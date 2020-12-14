@@ -1,22 +1,26 @@
 .button {
-    transform: skew(-13deg, -1deg);
-    width: 411px;
     height: 99px;
     overflow: hidden;
     transition: 0.2s;
     font-family: 't';
-    background: rgb(114,137,218);
-    background: -moz-linear-gradient(249deg, rgba(114,137,218,1) 0%, rgba(97,117,183,1) 100%);
-    background: -webkit-linear-gradient(249deg, rgba(114,137,218,1) 0%, rgba(97,117,183,1) 100%);
-    background: linear-gradient(249deg, rgba(114,137,218,1) 0%, rgba(97,117,183,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= "#7289da",endColorstr="#6175b7",GradientType=1);
     box-shadow: 15px 15px 1px rgba(0, 0, 0, 0.07);
     cursor: pointer;
+    border: 1px solid;
+    width: 310px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%) skew(-13deg, -1deg);
+    top: 35%;
+    background: #2c2f33;
+    font-size: 8px;
+}
+
+.button:hover > div:nth-of-type(1) {
+    font-size: 534%;
 }
 
 .button > div:nth-of-type(1) {
     font-size: 310%;
-    transform: skew(6deg);
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -24,4 +28,5 @@
     white-space: nowrap;
     text-transform: uppercase;
     font-family: BurBank;
+    transition: 0.2s;
 }
