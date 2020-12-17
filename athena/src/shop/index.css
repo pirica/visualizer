@@ -240,6 +240,7 @@ html {
     margin: 0;
     transform: translate(-50%, -7.6%);
     top: 0;
+    overflow: hidden;
     align-items: center;
     left: 50%;
     justify-content: center;
