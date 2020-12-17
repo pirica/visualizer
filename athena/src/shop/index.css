@@ -223,3 +223,73 @@ html {
 ::-webkit-scrollbar {
     display: none;
 } */
+
+#carousel {
+    transform: translate(0%, -15%);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+#carousel > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    transform: translate(-50%, -7.6%);
+    top: 0;
+    align-items: center;
+    left: 50%;
+    justify-content: center;
+}
+
+#carousel > div > div:nth-of-type(1) {
+    width: 100%;
+    background: url(https://cdn2.unrealengine.com/15br-daryl-michonne-socialassets-motd-1920x1080-1920x1080-f29c9855e51d.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    background-size: 3500% 832%;
+    border-bottom: 2px solid rgba(46,157,226,1);
+    box-shadow: 0 0 54px rgba(13,71,168,1);
+}
+
+#carousel > div > div:nth-of-type(1) > img {
+    height: 545px;
+    margin: 0;
+}
+
+#carousel > div > div:nth-of-type(1) > div {
+    width: 100%;
+    position: absolute;
+    color: white;
+    text-align: center;
+    bottom: 11px;
+    font-size: 49px;
+    text-transform: uppercase;
+    transform: skew(-8deg);
+}
+
+.direction > div:nth-of-type(1) {
+    top: 17px;
+}
+
+.direction > div {
+    background: rgba(13,71,168,1);
+    transform: translate(-50%);
+    left: 50%;
+    position: absolute;
+    border-radius: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: rgba(46,157,226,1);
+    z-index: 1;
+}
+
+.direction > div:nth-of-type(2) {
+    top: 90%;
+}

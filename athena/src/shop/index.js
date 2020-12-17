@@ -49,6 +49,7 @@ module.data.Sections = class Sections {
 
         while(length--) {
             const key = keys[length];
+            if(key === 'carousel') continue;
             const section = this.sections[key].sort((a, b) => parseFloat(b.priority) - parseFloat(a.priority)).reverse();
             let lengther = section.length;
 
@@ -169,6 +170,28 @@ module.data.Shop = class Shop {
         console.log('%c[Shop]', 'color: #7289DA', message);
     }
 
+    reCheck() {
+        $('.direction').css('display', '');
+        const forward = $('.main').next();
+        const backwards = $('.main').prev();
+
+        if(forward[0]) {
+            $('.direction').children()[1].style.display = '';
+            $('.direction').children()[1].innerHTML = forward.children()[1] ? forward.children()[1].children[0].innerText || 'unamed' : 'unamed' || 'unamed';
+            $('.direction').children()[1].onclick = () => {
+                this.switch('down', false);
+            }
+        } else $('.direction').children()[1].style.display = 'none';
+
+        if(backwards[0]) {
+            $('.direction').children()[0].style.display = '';
+            $('.direction').children()[0].innerHTML = backwards.children()[1] ? backwards.children()[1].children[0].innerText || 'unamed' : 'unamed' || 'unamed';
+            $('.direction').children()[0].onclick = () => {
+                this.switch('up', false);
+            }
+        } else $('.direction').children()[0].style.display = 'none';
+    }
+
     addAllPanels() {
         const add = () => {
             $('.rows').empty();
@@ -177,11 +200,20 @@ module.data.Shop = class Shop {
     
             while(length--) {
                 const key = keys[length];
-                
-                const selected = key == JSON.parse(localStorage.store).section.id;
+
+                if(key === 'carousel') {
+                    const carousel = document.createElement('div');
+                    document.getElementsByClassName('rows')[0].appendChild(carousel);
+                    const { title, url } = this.sections.raw[key];
+                    carousel.outerHTML = `<div id="carousel" class="carousel main"><div><div style="background: url(${url}); background-size: 3500% 832%;"><img src="${url}"><div>${title}</div></div></div></div>`;
+                    carousel.classList.add('carousel');
+                    continue;
+                }
+
+                const selected = key === JSON.parse(localStorage.store).section.id;
                 const main = document.getElementsByClassName('main')[0];
 
-                this.setPanel(key, selected || keys.length - 1 === length && !main);
+                this.setPanel(key, selected && !main || keys.length - 1 === length && !main);
             }
 
             $('.main').nextAll().css('top', '100%');
@@ -206,6 +238,7 @@ module.data.Shop = class Shop {
 
     setPanel(type, selected=false) {
         const section = this.sections[type];
+        if(!section) return;
         let Panel = null;
         if(!$(`#${type}`)[0]) {
             Panel = document.createElement('div');
@@ -240,6 +273,7 @@ module.data.Shop = class Shop {
 
         Panel.children[1].children[0].innerHTML = section[0].section.name;
         $('.rows').children().css('position', 'absolute').css('top', '100%');
+        this.reCheck();
     }
 
     switch(direction, switching) {
@@ -269,16 +303,18 @@ module.data.Shop = class Shop {
                 opacity: 1
             }, 50);
             this.setRowAnimationLoad(next);
+            this.reCheck();
         }, 150);
         element.classList.remove('main');
 
-        localStorage.store = JSON.stringify({
+        if(this.sections[next[0].id]) localStorage.store = JSON.stringify({
             ...JSON.parse(localStorage.store),
             section: {
                 id: next[0].id,
                 name: this.sections[next[0].id][0].section.name
             }
         });
+
     }
 
     setRowAnimationLoad(row) {
@@ -337,8 +373,6 @@ module.data.Shop = class Shop {
             const direction = body.getBoundingClientRect().top > position ? 'up' : 'down';
 
             cls.switch(direction, switching);
-
-            console.log(direction)
 
             position = body.getBoundingClientRect().top;
         });

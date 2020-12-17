@@ -64,10 +64,9 @@ module.data.Characters = class Characters {
         await this.wait(200);
         this.element.children('img').attr('style', 'position: relative;top: 10px;');
 
-        if(this.character) $(`[id="${this.character.name}"]`).css('boxShadow', '');
+        if(this.character) $(`[id="${this.character.name}"]`).attr('type', '');
 
-        // $(`[id="${character.name}"]`).css('boxShadow', 'white 0px 0px 0px 3px, 5px 5px 30px');
-        $(`[id="${character.name}"]`).css('boxShadow', 'rgba(127,0,0,1) 0px 0px 0px 3px, 5px 5px 30px');
+        $(`[id="${character.name}"]`).attr('type', 'active');
 
         this.element.children().eq(3).css('display', 'block').children()[0].innerHTML = character.name;
 
@@ -89,8 +88,7 @@ module.data.Characters = class Characters {
                 const location = character.locations[length - 1];
 
                 locations.children[length - 1].innerHTML = `<div></div><div>${location.name || location.id}</div>`;
-                // locations.children[length - 1].children[0].style.background = '#0042FF';
-                locations.children[length - 1].children[0].style.background = 'rgba(255,0,0,1)';
+                locations.children[length - 1].children[0].setAttribute('type', 'active');
 
                 locations.children[length - 1].onclick = () => {
                     if(!location.images) return;

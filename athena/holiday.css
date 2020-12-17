@@ -1,7 +1,40 @@
-.christmas {
+/* .christmas {
     background: rgb(255,0,0);
     background: -moz-linear-gradient(19deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
     background: -webkit-linear-gradient(19deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
     background: linear-gradient(19deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#7f0000",GradientType=1);
 }
+
+.notification {
+    background: #630000;
+    color: rgb(255,0,0);
+}
+
+.notification > div:nth-of-type(2) {
+    color: rgb(206,0,0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(127,0,0,1);
+}
+
+::-webkit-scrollbar {
+    background: rgba(255,0,0,1);
+}
+
+.background {
+    background: rgb(255,0,0);
+    background: -moz-linear-gradient(19deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
+    background: -webkit-linear-gradient(19deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
+    background: linear-gradient(19deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#7f0000",GradientType=1);
+}
+
+.modules > div > div {
+    background: rgb(255,0,0);
+    background: -moz-linear-gradient(19deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
+    background: -webkit-linear-gradient(19deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
+    background: linear-gradient(19deg, rgba(255,0,0,1) 0%, rgba(127,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#7f0000",GradientType=1);
+} */

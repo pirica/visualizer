@@ -27,7 +27,8 @@ class ErrorHandler {
 
                 return response;
             } catch(err) {
-                return this.handler(err);
+                this.handler(err);
+                throw err;
             }
         }
     }

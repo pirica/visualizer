@@ -167,26 +167,13 @@
                    ]
                 }
             ],
-            "body": "<div class=\"rows\"><div class=\"main\"><div><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 262px;height: 410px;margin: 5px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 262px;height: 410px;margin: 5px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div><div style=\"width: 262px;height: 410px;margin: 5px;position: relative;top: -6px;left: -7px;flex-shrink: 0;\"><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 100%;height: 202px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;margin: 6px;flex-shrink: 0;\"></div><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 100%;height: 202px;margin: 6px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div></div><div style=\"width: 262px;height: 410px;margin: 5px;position: relative;top: -6px;left: -7px;flex-shrink: 0;\"><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 100%;height: 202px;margin: 6px;animation-duration: 48.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 100%;height: 202px;margin: 6px;animation-duration: 45.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div></div><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 262px;height: 410px;margin: 5px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div></div></div><div></div></div><div class=\"center\"><div class=\"updates\" style=\"display: none;\"><div>Updates</div><div><div><div>I</div>You can now save owned items, the colors have been changed for it as well.</div><div><div>I</div>Fixed and shrinked a lot of code making it go faster in loading.</div><div><div>I</div>Click events on items, making it able to own items.</div><div><div>I</div>We added the UPDATES menu and the button, making you able to see the updates.</div></div><div class=\"button\"><div>close</div></div></div></div>"
+            "body": "<div class=\"rows\"><div class=\"main\"><div><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 262px;height: 410px;margin: 5px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 262px;height: 410px;margin: 5px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div><div style=\"width: 262px;height: 410px;margin: 5px;position: relative;top: -6px;left: -7px;flex-shrink: 0;\"><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 100%;height: 202px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;margin: 6px;flex-shrink: 0;\"></div><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 100%;height: 202px;margin: 6px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div></div><div style=\"width: 262px;height: 410px;margin: 5px;position: relative;top: -6px;left: -7px;flex-shrink: 0;\"><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 100%;height: 202px;margin: 6px;animation-duration: 48.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 100%;height: 202px;margin: 6px;animation-duration: 45.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div></div><div style=\"background: linear-gradient(to right, #2c2f33 8%, white);width: 262px;height: 410px;margin: 5px;animation-duration: 56.2s;animation-iteration-count: infinite;animation-name: loading;flex-shrink: 0;\"></div></div></div><div></div></div><div class=\"center\"><div class=\"updates\" style=\"display: none;\"><div>Updates</div><div><div><div>I</div>You can now save owned items, the colors have been changed for it as well.</div><div><div>I</div>Fixed and shrinked a lot of code making it go faster in loading.</div><div><div>I</div>Click events on items, making it able to own items.</div><div><div>I</div>We added the UPDATES menu and the button, making you able to see the updates.</div></div><div class=\"button\"><div>close</div></div></div></div><div class=\"direction\" style=\"display: none;\"><div></div><div></div></div>"
         },
         {
             "name": "Collection",
             "description": "The module that grabs data from our API and shows the data in a in-game form.",
             "image": "https://fortnite-api.com/images/cosmetics/br/cid_883_athena_commando_m_chonejonesy/icon.png",
             "head": [
-                {
-                   "type": "link",
-                   "data": [
-                      {
-                         "type": "rel",
-                         "value": "stylesheet"
-                      },
-                      {
-                         "type": "href",
-                         "value": "../../include.css"
-                      }
-                   ]
-                },
                 {
                    "type": "link",
                    "data": [
@@ -293,19 +280,6 @@
                    ]
                 },
                 {
-                   "type": "link",
-                   "data": [
-                      {
-                         "type": "rel",
-                         "value": "stylesheet"
-                      },
-                      {
-                         "type": "href",
-                         "value": "../../item.css"
-                      }
-                   ]
-                },
-                {
                    "type": "meta",
                    "data": [
                       {
@@ -319,7 +293,7 @@
                    ]
                 }
              ],
-            "body": "<div class=\"character\"><div></div><div><div></div></div><div></div><div style=\"display: none;\"><div></div><div><!-- background: #0042FF; --><div><div></div><div></div></div><div><div></div><div></div></div><div><div></div><div></div></div></div></div></div><div class=\"characters\"></div><div class=\"error\" style=\"display: none;\"><div></div><div></div></div><div class=\"location\" style=\"display: none;\"><img><img draggable=\"false\"><div></div><div><div>My friend here Justin</div><div>Justin.Taken.Cracked.At.Fortnite.Uh</div></div></div>"
+            "body": "<div class=\"character\"><div></div><div><div></div></div><div></div><div style=\"display: none;\"><div></div><div><!-- background: #0042FF; --><div><div></div><div></div></div><div><div></div><div></div></div><div><div></div><div></div></div></div></div><div></div></div><div class=\"characters\"></div><div class=\"error\" style=\"display: none;\"><div></div><div></div></div><div class=\"location\" style=\"display: none;\"><img><img draggable=\"false\"><div></div><div><div>My friend here Justin</div><div>Justin.Taken.Cracked.At.Fortnite.Uh</div></div></div>"
         }
       ]
 }

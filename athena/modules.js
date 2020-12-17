@@ -54,6 +54,8 @@ class Modules {
                     error: e
                 });
             }
+
+            throw e;
         }
 
         handler = this.handler;
@@ -61,8 +63,8 @@ class Modules {
         this.errorHandler = new ErrorHandler(this.handler);
     }
 
-    log(message) {
-        console.log('%c[Modules]', 'color: #7289DA', message);
+    log(...args) {
+        console.log('%c[Modules]', 'color: #7289DA', ...args);
     }
 
     set(m) {
@@ -86,7 +88,7 @@ class Modules {
         $('html').css('background', '');
         this.set(module);
 
-        const { head: headData, body, background } = module;
+        const { head: headData, body } = module;
 
         if($('head')[1]) $('head')[1].remove();
 
@@ -147,20 +149,6 @@ class Modules {
 
             head.appendChild(element);
         }
-
-        // if($('.background')[0]) $('.background')[0].remove();
-
-        // if(background) {
-        //     const element = document.createElement('div');
-        //     element.classList.add('background');
-        //     element.style.background = background;
-
-        //     document.body.appendChild(element);
-        // }
-
-        const holiday = document.createElement('div');
-        head.appendChild(holiday);
-        holiday.outerHTML = '<link rel="stylesheet" href="./holiday.css">';
         
         this.executed = module;
     }
@@ -179,7 +167,7 @@ class Modules {
             div.id = module.name;
 
             if(module.image) {
-                div.innerHTML = `<div class="christmas" style="-webkit-mask-box-image: url(https://fortnite-api.com/images/cosmetics/br/cid_883_athena_commando_m_chonejonesy/icon.png);"></div>`;
+                div.innerHTML = `<div style="-webkit-mask-box-image: url(${module.image});"></div>`;
             }
 
             div.onclick = () => module.execute();
