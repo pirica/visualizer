@@ -107,6 +107,23 @@
                    ]
                 },
                 {
+                  "type": "script",
+                  "data": [
+                     {
+                        "type": "src",
+                        "value": "https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"
+                     },
+                     {
+                        "type": "integrity",
+                        "value": "sha512-e2WVdoOGqKU97DHH6tYamn+eAwLDpyHKqPy4uSv0aGlwDXZKGwyS27sfiIUT8gpZ88/Lr4UZpbRt93QkGRgpug=="
+                     },
+                     {
+                        "type": "crossorigin",
+                        "value": "anonymous"
+                     }
+                  ]
+                },
+                {
                    "type": "script",
                    "data": [
                       {

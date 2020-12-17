@@ -190,6 +190,7 @@ module.data.Shop = class Shop {
                 this.switch('up', false);
             }
         } else $('.direction').children()[0].style.display = 'none';
+
     }
 
     addAllPanels() {
@@ -207,6 +208,7 @@ module.data.Shop = class Shop {
                     const { title, url } = this.sections.raw[key];
                     carousel.outerHTML = `<div id="carousel" class="carousel main"><div><div style="background: url(${url}); background-size: 3500% 832%;"><img src="${url}"><div>${title}</div></div></div></div>`;
                     carousel.classList.add('carousel');
+                    $('#carousel').children().eq(0).children().eq(0).children().eq(1).fitText(2.5);
                     continue;
                 }
 
@@ -304,6 +306,13 @@ module.data.Shop = class Shop {
             }, 50);
             this.setRowAnimationLoad(next);
             this.reCheck();
+            console.log();
+            if(!this.sections[$('.main')[0].id][0].text && module.data.osM) {
+                this.sections[$('.main')[0].id][0].text = true;
+                $('.main').children().eq(1).children().eq(0).fitText(0, {
+                    minFontSize: '23px'
+                });
+            }
         }, 150);
         element.classList.remove('main');
 
@@ -314,7 +323,6 @@ module.data.Shop = class Shop {
                 name: this.sections[next[0].id][0].section.name
             }
         });
-
     }
 
     setRowAnimationLoad(row) {
@@ -353,8 +361,6 @@ module.data.Shop = class Shop {
         };
 
         const delay = 1350;
-        const body = document.body;
-        let position = 0;
         let allow = true;
 
         document.onwheel = (e) => {
@@ -368,14 +374,6 @@ module.data.Shop = class Shop {
                 }, delay);
             }
         }
-
-        window.addEventListener('scroll', () => {
-            const direction = body.getBoundingClientRect().top > position ? 'up' : 'down';
-
-            cls.switch(direction, switching);
-
-            position = body.getBoundingClientRect().top;
-        });
 
         let open = false;
 
