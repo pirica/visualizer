@@ -123,7 +123,7 @@ module.data.Sections = class Sections {
         else {
             if(rarity) colors = {
                 a: rarity.colorA,
-                b: rarity.colorB
+                b: rarity.colorB 
             };
             asset = '';
         }
@@ -146,8 +146,8 @@ module.data.Sections = class Sections {
                 item.has = true;
             }
 
-            div.style.cssText = `background: ${typeof background === 'string' ? `${background};${width ? `width:${width};` : ''}` : `${render ? '' : 'radial'}-gradient(circle, ${colors.b}, 50%, ${colors.a} 138%);${width ? `width:${width};` : ''}`}`;
-            div.innerHTML = `<img src="${asset}" draggable="false"><div>${tags.enabled ? '<img src="src/images/styles.png">' : ''}<div style="background: ${item.series ? colors.b : rarity ? rarity.colorA : null};"></div><div>${name}<div>${type}</div></div><div><img src="./src/images/vbucks.png"><div><div>${Intl.NumberFormat().format(price)}</div></div>${regularPrice !== price ? `<div>${Intl.NumberFormat().format(regularPrice)}</div>` : ''}</div></div>${render ? `<div style="background: radial-gradient(circle at ${item.assets[0].renderData.Spotlight_Position_X}% ${item.assets[0].renderData.Spotlight_Position_Y}%, ${item.assets[0].renderData.FallOff_Color.color} 0%, transparent 100%); filter: brightness(${item.assets[0].renderData.Gradient_Hardness});"></div>` : '<div></div>'}${banner ? `<div><div style="left: 0;border: 3px solid ${banner.data.border};background: ${banner.data.background};color: ${banner.data.color};">${banner.name}</div></div>` : ''}`;
+            div.style.cssText = `background: ${typeof background === 'string' ? `${background};${width ? `width:${width};` : ''}` : `${render ? 'radial' : 'radial'}-gradient(circle, ${colors.b}, 50%, ${colors.a} 138%);${width ? `width:${width};` : ''}`}`;
+            div.innerHTML = `<img src="${asset}" draggable="false"><div>${tags.enabled ? '<img src="src/images/styles.png">' : ''}<div style="background: ${item.series ? colors.b : rarity ? rarity.colorA : null};"></div><div>${name}<div>${type}</div></div><div><img src="./src/images/vbucks.png"><div><div>${Intl.NumberFormat().format(price)}</div></div>${regularPrice !== price ? `<div>${Intl.NumberFormat().format(regularPrice)}</div>` : ''}</div></div>${typeof background !== 'string' && render ? `<div style="background: radial-gradient(circle at ${item.assets[0].renderData.Spotlight_Position_X}% ${item.assets[0].renderData.Spotlight_Position_Y}%, ${item.assets[0].renderData.FallOff_Color.color} 0%, transparent 100%); filter: brightness(${item.assets[0].renderData.Gradient_Hardness || '2'});"></div>` : '<div></div>'}${banner ? `<div><div style="left: 0;border: 3px solid ${banner.data.border};background: ${banner.data.background};color: ${banner.data.color};">${banner.name}</div></div>` : ''}`;
         }
 
         item.element = div;
