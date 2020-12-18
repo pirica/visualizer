@@ -280,15 +280,15 @@ html {
 }
 
 .direction > div {
-    background: rgba(13,71,168,1);
-    transform: translate(-50%);
+    background: white;
     left: 50%;
     position: absolute;
-    border-radius: 20px;
     padding: 10px;
     text-transform: uppercase;
-    color: rgba(46,157,226,1);
     z-index: 1;
+    transform: perspective(141px) rotateY(12deg) translate(-50%);
+    border-radius: 0px;
+    color: #2c2f33;
 }
 
 .direction > div:nth-of-type(2) {
