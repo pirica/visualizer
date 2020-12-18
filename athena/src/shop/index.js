@@ -202,7 +202,7 @@ module.data.Shop = class Shop {
             while(length--) {
                 const key = keys[length];
 
-                if(key === 'carousel') {
+                if(key === 'carousel' && this.sections.raw[key]) {
                     const carousel = document.createElement('div');
                     document.getElementsByClassName('rows')[0].appendChild(carousel);
                     const { title, url } = this.sections.raw[key];
